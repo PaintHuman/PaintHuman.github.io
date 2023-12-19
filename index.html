@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description"
+        content="PaintHuman: Towards High-fidelity Text-to-3D Human Texturing Via Denoised Score Distillation">
+    <meta name="keywords" content="PaintHuman">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PaintHuman: Towards High-fidelity Text-to-3D Human Texturing Via Denoised Score Distillation</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+    <link rel="stylesheet" href="./static/css/bulma.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="./static/css/index.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="./static/js/fontawesome.all.min.js"></script>
+    <script src="./static/js/bulma-carousel.min.js"></script>
+    <script src="./static/js/bulma-slider.min.js"></script>
+    <script src="./static/js/index.js"></script>
+    <script src="https://scripts.sirv.com/sirvjs/v3/sirv.js"></script>
+    <style>
+        #pic_list {
+            display: block;
+            white-space: nowrap;
+            overflow: auto;
+        }
+
+        #pic_list li {
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="hero">
+        <div class="hero-body">
+            <div class="container is-max-desktop">
+                <div class="columns is-centered">
+                    <div class="column has-text-centered">
+                        <h1 class="title is-1 publication-title">
+                            PaintHuman: Towards High-fidelity Text-to-3D Human Texturing Via Denoised Score Distillation
+                        </h1>
+                        <div class="is-size-5 publication-authors">
+                            <span class="author-block"></span>
+                            <h3 style="color:#5a6268;">AAAI 2024</h3>
+                            <span class="author-block">
+                                <a href="https://scholar.google.com/citations?user=sdxlMmMAAAAJ&hl=en">Jianhui
+                                    Yu</a><sup>1</sup>,
+                            </span>
+                            <span class="author-block">
+                                <a href="https://www.zhuhaozh.xyz">Hao Zhu</a><sup>2</sup>,
+                            </span>
+                            <span class="author-block">
+                                <a href="https://liming-jiang.com/">Liming Jiang</a><sup>3</sup>,
+                            </span>
+                            <span class="author-block">
+                                <a href="https://scholar.google.com/citations?user=559LF80AAAAJ&hl=en">Chen Change
+                                    Loy</a><sup>3</sup>,
+                            </span>
+                            <span class="author-block">
+                                <a href="https://weidong-tom-cai.github.io/">Weidong Cai</a><sup>1</sup>,
+                            </span>
+                            <span class="author-block">
+                                <a href="https://wywu.github.io/">Wayne Wu</a><sup>2&#8224 </sup>
+                            </span>
+                        </div>
+
+                        <div class="is-size-5 publication-authors">
+                            <span class="author-block"><sup>1</sup>University of Sydney, </span>
+                            <span class="author-block"><sup>2</sup>Shanghai AI Laboratory, </span>
+                            <span class="author-block"><sup>3</sup>S-Lab, Nanyang Technological University </span>
+                        </div>
+
+                        <div class="column has-text-centered">
+                            <div class="publication-links">
+                                <!-- PDF Link. -->
+                                <span class="link-block">
+                                    <a href="https://arxiv.org/pdf/2303.14717.pdf"
+                                        class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon">
+                                            <i class="fas fa-file-pdf"></i>
+                                        </span>
+                                        <span>Paper (arxiv)</span>
+                                    </a>
+                                </span>
+                                <!-- <span class="link-block">
+                              <a href="https://drive.google.com/file/d/1WsopipyFG5Kuilwo0pbOmzhZfxs0dx-C/view?usp=sharing"
+                                target="_blank" class="external-link button is-normal is-rounded is-dark">
+                                <span class="icon">
+                                  <i class="ai ai-arxiv"></i>
+                                </span>
+                                <span>Supplement</span>
+                              </a>
+                            </span> -->
+                                <!-- Code Link. -->
+                                <span class="link-block">
+                                    <a href="https://github.com/CelebV-Text/CelebV-Text"
+                                        class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon">
+                                            <i class="fab fa-github"></i>
+                                        </span>
+                                        <span>GitHub</span>
+                                    </a>
+                                </span>
+                                <!-- Video Link. -->
+                                <span class="link-block">
+                                    <a href="https://www.youtube.com/watch?v=0TS1hQwjNWw"
+                                        class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon">
+                                            <i class="fab fa-youtube"></i>
+                                        </span>
+                                        <span>Demo Video</span>
+                                    </a>
+                                </span>
+                                <!-- Dataset Link. -->
+                                <span class="link-block">
+                                    <a href="#" class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon">
+                                            <i class="far fa-images"></i>
+                                        </span>
+                                        <span>Data Explore (Coming soon)</span>
+                                    </a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <br>
+
+    <!-- Teaser Picture -->
+    <section class="hero teaser">
+        <div class="container is-max-desktop">
+            <div class="hero-body">
+                <div class="figure">
+                    <img class="Sirv image-main" src="static/images/teaser.png" data-src="static/images/teaser.png">
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Abstract. -->
+    <section class="section">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-four-fifths">
+                    <h2 class="title is-3">Abstract</h2>
+                    <div class="content has-text-justified">
+                        <p> Recent advances in zero-shot text-to-3D human generation, which employ the human model prior
+                            (eg, SMPL) or Score Distillation Sampling (SDS) with pre-trained text-to-image diffusion
+                            models, have been groundbreaking.
+                            However, SDS may provide inaccurate gradient directions under the weak diffusion guidance,
+                            as it tends to produce over-smoothed results and generate body textures that are
+                            inconsistent with the detailed mesh geometry.
+                            Therefore, directly leveraging existing strategies for high-fidelity text-to-3D human
+                            texturing is challenging.
+                        </p>
+                        <p>
+                            In this work, we propose a model called <i>PaintHuman</i> to addresses the challenges from
+                            two perspectives.
+                            We first propose a novel score function, <i>Score Distillation (DSD)</i>, which
+                            directly modifies the SDS by introducing negative gradient components to iteratively correct
+                            the gradient direction and generate high-quality textures.
+                            In addition, we use the depth map as a geometric guide to ensure that the texture is
+                            semantically aligned to human mesh surfaces.
+                            To guarantee the quality of rendered results, we employ geometry-aware networks to predict
+                            surface materials and render realistic human textures.
+                            Extensive experiments, benchmarked against state-of-the-art methods, validate the
+                            efficacy of our approach.
+                        </p>
+                        <p>For more details of our work, please refer to the paper "<a href="#">PaintHuman: Towards
+                                High-fidelity Text-to-3D Human Texturing Via Denoised Score Distillation</a>".
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <section class="section" id="Citaton">
+        <div class="container is-max-desktop content">
+            <h2 class="title">BibTeX</h2>
+            <p>If you find this helpful, please cite our work: </p>
+            <pre><code>@inproceedings{yu2022painthuman,
+title    ={PaintHuman: Towards High-fidelity Text-to-3D Human Texturing Via Denoised Score Distillation},
+author   ={Yu, Jianhui and Zhu, Hao and Jiang, Liming and Loy, Chen Change and Cai, Weidong and Wu, Wayne},
+booktitle={AAAI},
+year     ={2024}
+}</code></pre>
+        </div>
+    </section>
+
+
+    <footer class="footer">
+        <div class="columns is-centered">
+            <div class="content">
+                <p> This template is borrowed from <a href="https://github.com/nerfies/nerfies.github.io"> nerfies's
+                        webpage</a>. </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        $(window).on('load', function () {
+            $('#loading').hide();
+        })
+    </script>
+</body>
+
+</html>
